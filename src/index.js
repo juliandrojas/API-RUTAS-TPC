@@ -29,7 +29,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //Configuramos las rutas
 app.use('/', indexRoutes);
 app.use('/empresas', empresasRoutes);
-app.use('/ruta', rutasRoutes);
+app.use('/rutas', rutasRoutes);
+// Not found route
+app.use((req, res, next) => {
+    res.status(404).render('404');  // Renderiza la vista de error 404
+});
 //Configuramos las imagenes
 app.use(express.static(path.join(__dirname, 'public'))); // Configura la carpeta 'public' como estática
 //Configuramos puertos
