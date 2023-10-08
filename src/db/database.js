@@ -1,12 +1,12 @@
 import pg from 'pg';
+import { DB_DATABASE, DB_HOST, DB_PASSWORD, DB_PORT, DB_USER } from '../config.js';
 const { Pool } = pg;
-
 const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'app_rutas_tpc',
-  password: '140201',
-  port: 5432,
+  user: DB_USER,
+  host: DB_HOST,
+  database: DB_DATABASE,
+  password: DB_PASSWORD,
+  port: DB_PORT,
 });
 
 // Conectar a la base de datos
