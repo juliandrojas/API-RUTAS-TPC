@@ -1,5 +1,5 @@
 import bodyParser from 'body-parser';
-import cors from 'cors';
+//import cors from 'cors';
 import express from 'express';
 import morgan from 'morgan';
 import path, { dirname } from 'path';
@@ -19,7 +19,7 @@ app.use(upload);
 // Configuramos el middleware morgan para el registro de solicitudes
 app.use(morgan('dev'));
 // Configuramos cors
-app.use(cors())
+//app.use(cors())
 // Configuramos ejs
 app.set('view engine', 'ejs');
 //Configuramos las vistas
