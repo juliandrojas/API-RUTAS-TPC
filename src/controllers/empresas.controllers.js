@@ -5,7 +5,8 @@ export const cargarDatosEmpresa = (req, res) => {
 }
 export const cargarInformacion = async (req, res) => {
   try {
-    res.send("All Right!");
+    const { nombreempresa } = req.body;
+    res.send(nombreempresa);
   } catch (error) {
     
   }
