@@ -5,10 +5,18 @@ export const cargarDatosEmpresa = (req, res) => {
 }
 export const cargarInformacion = async (req, res) => {
   try {
+    res.send("All Right!");
+  } catch (error) {
+    
+  }
+}
+/*
+export const cargarInformacion = async (req, res) => {
+  try {
     const { nombreempresa } = req.body;
     console.log(nombreempresa);
     // Construye la URL de la imagen utilizando la ruta local del servidor
-    const imagenUrl = `http://192.168.0.101:3000/uploads/${req.file.filename}`;
+    const imagenUrl = `http://192.168.0.102:3000/uploads/${req.file.filename}`;
     console.log("imagen url", imagenUrl);
     // Registra la información en la base de datos
     // Registra al nuevo empleado en la base de datos
@@ -27,7 +35,7 @@ export const cargarInformacion = async (req, res) => {
     console.error('Error al registrar en la base de datos:', error);
     res.status(500).json({ error: 'Error interno del servidor' });
   }
-}
+}*/
 export const mostrarDatosEmpresa = async (req, res) => {
   try {
     const queryEmpresas = 'SELECT * FROM pruebas';
