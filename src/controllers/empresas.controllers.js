@@ -6,8 +6,8 @@ export const cargarDatosEmpresa = (req, res) => {
 export const cargarInformacion = async (req, res) => {
   try {
     const { nombreempresa } = req.body;
-    const file = req.file;
-    res.send("Nombre de la empresa: "+nombreempresa+" File: "+file);
+    //const file = req.file;
+    res.send("Nombre de la empresa: "+nombreempresa);
     //Construimos la url de la imagen utilizando la ruta local del servidor
   } catch (error) {
     
